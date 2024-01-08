@@ -2,10 +2,10 @@
 
 ## Summary
 
-H-01 The `onlyRole` modifier has no check.
-H-02 The `checkRole` modifier has no check.
+[[H-01](#H-01)] The `onlyRole` modifier has no check.
+[[H-02](#H-02)] The `checkRole` modifier has no check.
 
-### [H-01] The `onlyRole` modifier has no check.
+### [H-01]<a name="H-01"></a> The `onlyRole` modifier has no check.
 
 _There is 1 instance of this issue._
 
@@ -25,7 +25,7 @@ VSCode
 
 Add `require` or `revert` statement that would revert if certain condition is not met.
 
-### [H-02] The `checkRole` modifier has no check.
+### [H-02]<a name="H-02"></a> The `checkRole` modifier has no check.
 
 _There is 1 instance of this issue._
 
