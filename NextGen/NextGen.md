@@ -1,9 +1,11 @@
 # NextGen report by Timenov
 
 ## Summary
-M-01 Attacker can DoS auction by winning it.
+| |Issue|Instances|
+|-|:-|:-:|
+| [M-01](#m-01) | Attacker can DoS auction by winning it. | 1 |
 
-### [M-01] Attacker can DoS auction by winning it.
+### [M-01]<a name="m-01"></a> Attacker can DoS auction by winning it.
 
 #### Impact
 Lets imagine the following scenario. Alice enters the auction with `1 ether`. After that Bob enters as well with `2 ether`. Eve(a malicious user) decides to DoS the auction. To do that she creates a smart contract that does not implement the `IERC721Receiver` interface and has no `onERC721Received()` function, so the contract will not be able to receive any NFTs. Admin calls `claimAuction()`, but the function reverts because it can't send the NFT to Eve's contract. Therefore the other users(Alice and Bob) will not get their money back.
