@@ -1,9 +1,11 @@
 # RabbitHole Quest Protocol report by Timenov
 
 ## Summary
-H-01 The `onlyMinter` modifier has no check.
+| |Issue|Instances|
+|-|:-|:-:|
+| [H-01](#h-01) | The `onlyMinter` modifier has no check. | 1 |
 
-### [H-01] The `onlyMinter` modifier has no check.
+### [H-01]<a name="h-01"></a> The `onlyMinter` modifier has no check.
 
 #### Impact
 The modifier `onlyMinter` used in `RabbitHoleReceipt.sol` and `RabbitHoleTickets.sol` has no `require` nor `revert` statement. This modifier is used in 3 functions. Having no check would mean that this modifier will always be bypassed and would result in everyone having the ability to call the `mint` and `mintBatch` functions.
